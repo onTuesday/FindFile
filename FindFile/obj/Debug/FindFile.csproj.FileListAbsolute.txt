@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\Repos\FindFile\FindFile\bin\Debug\FindFile.dll
+C:\Users\User\Desktop\Repos\FindFile\FindFile\bin\Debug\FindFile.pdb
+C:\Users\User\Desktop\Repos\FindFile\FindFile\obj\Debug\FindFile.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Repos\FindFile\FindFile\obj\Debug\FindFile.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Repos\FindFile\FindFile\obj\Debug\FindFile.dll
+C:\Users\User\Desktop\Repos\FindFile\FindFile\obj\Debug\FindFile.pdb

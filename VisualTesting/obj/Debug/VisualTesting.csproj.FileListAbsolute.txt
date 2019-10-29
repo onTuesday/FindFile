@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\Repos\FindFile\VisualTesting\bin\Debug\VisualTesting.exe.config
+C:\Users\User\Desktop\Repos\FindFile\VisualTesting\bin\Debug\VisualTesting.exe
+C:\Users\User\Desktop\Repos\FindFile\VisualTesting\bin\Debug\VisualTesting.pdb
+C:\Users\User\Desktop\Repos\FindFile\VisualTesting\bin\Debug\FindFile.dll
+C:\Users\User\Desktop\Repos\FindFile\VisualTesting\bin\Debug\FindFile.pdb
+C:\Users\User\Desktop\Repos\FindFile\VisualTesting\obj\Debug\VisualTesting.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Repos\FindFile\VisualTesting\obj\Debug\VisualTesting.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Repos\FindFile\VisualTesting\obj\Debug\VisualTesting.csproj.CopyComplete
+C:\Users\User\Desktop\Repos\FindFile\VisualTesting\obj\Debug\VisualTesting.exe
+C:\Users\User\Desktop\Repos\FindFile\VisualTesting\obj\Debug\VisualTesting.pdb
