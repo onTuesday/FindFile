@@ -13,19 +13,9 @@ namespace VisualTesting
     {
         static void Main(string[] args)
         {
+            Client a = new Client();
+            a.Find("", "");
             
-            Assembly dll = Assembly.Load(@"FindFile");
-
-            Object client = dll.CreateInstance("Client");
-            Type T = dll.GetType("Client");
-
-            MethodInfo FindInfo = T.GetMethod("Find");
-
-            object[] FindArgs = new object[2];
-            FindArgs[0] = "qqq";
-            FindArgs[1] = "www";
-
-            FindInfo.Invoke(client, FindArgs);
         }
     }
 }
