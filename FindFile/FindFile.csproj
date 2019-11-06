@@ -44,6 +44,7 @@
     <Compile Include="Client.cs" />
     <Compile Include="Directory.cs" />
     <Compile Include="DirectoryHandler.cs" />
+    <Compile Include="Exceptions.cs" />
     <Compile Include="File.cs" />
     <Compile Include="MaskHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
