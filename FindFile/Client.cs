@@ -12,15 +12,17 @@ namespace FindFile
     {
         public int Find(string path, string mask)
         {
+            MaskHandler maskHandler = new MaskHandler(mask);
+            DirectoryHandler dirHandler = new DirectoryHandler( maskHandler );
+
             //Проверка на существование директории
             if (!Directory.Exists(path))
             {
-                throw new DirectotyDoesntExistsException();
                 Console.WriteLine("Cannot find directory");
-                return -1;
+                throw new DirectotyDoesntExistsException();
             }
-            //Создаём класс, который будет рекурсивно обходить началбную директорию
-            DirectoryHandler handler = new DirectoryHandler();
+
+            dirHandler.GetAllFiles(path);
 
             return 0;   
         }

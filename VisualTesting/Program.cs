@@ -14,12 +14,16 @@ namespace VisualTesting
         {
 
             CallGetAllFiles("C:\\Users\\User\\Desktop\\Repos\\FindFile\\Testing\\testFolder_1");
+            File q = new File("qwer");
+
+
             
         }
 
         public static void CallGetAllFiles(string path)
         {
-            DirectoryHandler dirHandler = new DirectoryHandler();
+            MaskHandler maskH = new MaskHandler("");
+            DirectoryHandler dirHandler = new DirectoryHandler(maskH);
             dirHandler.GetAllFiles(path);
             
         }

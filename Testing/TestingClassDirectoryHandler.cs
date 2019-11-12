@@ -14,7 +14,8 @@ namespace Testing
         [TestMethod]
         public void countOfFiles()
         {
-            DirectoryHandler dHandler = new DirectoryHandler();
+            MaskHandler handler = new MaskHandler("");
+            DirectoryHandler dHandler = new DirectoryHandler(handler);
             Assert.AreEqual(dHandler.GetAllFiles("C:\\Users\\User\\Desktop\\Repos\\FindFile\\Testing\\testFolder_1"), 6);
         }
     }

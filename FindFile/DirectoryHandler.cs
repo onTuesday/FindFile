@@ -8,6 +8,12 @@ namespace FindFile
 {
     public class DirectoryHandler
     {
+        private MaskHandler maskHandler; //Класс-обработчик, в который мы посылаем файл
+
+        public DirectoryHandler( MaskHandler maskHandler )
+        {
+            this.maskHandler = maskHandler;
+        }
 
         public int GetAllFiles(string path)
         {
@@ -16,9 +22,11 @@ namespace FindFile
             //Обрабатываем файлы
             foreach (var file in filesInCurrentDir)
             {
-                //Передаём файлы в обработчик
                 ++count;
-                Console.WriteLine(file);
+                //Передаём файлы в обработчик
+                File fileToHandle = new File(file);
+                fileToHandle.SetContentAndLenFromFile();
+                this.maskHandler.Compare(fileToHandle);
             }
 
             //Рекурсивно вызываем данную функцию для каталогов

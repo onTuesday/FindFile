@@ -65,5 +65,13 @@ namespace FindFile
                 Console.WriteLine("Cannot open file: {0}", this.name);
             }
         }
+
+        public static explicit operator string(File file)
+        {
+            string retString = "name -> " + file.GetName() + "\n"
+                             + "size -> " + file.GetLength() + "\n"
+                             + "content ->" + file.GetContent() + "\n";
+            return retString;
+        }
     }
 }
