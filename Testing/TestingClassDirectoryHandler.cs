@@ -17,7 +17,7 @@ namespace Testing
         {
             MaskHandler handler = new MaskHandler("");
             DirectoryHandler dHandler = new DirectoryHandler(handler);
-            Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\testFolder_1")), 6);
+            Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\testFolder_1")), 7);
         }
     }
 }
