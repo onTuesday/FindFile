@@ -10,7 +10,7 @@ using FindFile;
 namespace Testing
 {
     [TestClass]
-   public class TestingClassClient
+   public class Class_Client
     {
        
 

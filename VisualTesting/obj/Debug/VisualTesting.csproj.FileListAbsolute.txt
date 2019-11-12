@@ -8,3 +8,23 @@ C:\Users\User\Desktop\Repos\FindFile\VisualTesting\obj\Debug\VisualTesting.cspro
 C:\Users\User\Desktop\Repos\FindFile\VisualTesting\obj\Debug\VisualTesting.csproj.CopyComplete
 C:\Users\User\Desktop\Repos\FindFile\VisualTesting\obj\Debug\VisualTesting.exe
 C:\Users\User\Desktop\Repos\FindFile\VisualTesting\obj\Debug\VisualTesting.pdb
+C:\Users\Smailtos\Desktop\MP FindFileByMask\FindFile\VisualTesting\bin\Debug\VisualTesting.exe.config
+C:\Users\Smailtos\Desktop\MP FindFileByMask\FindFile\VisualTesting\bin\Debug\VisualTesting.exe
+C:\Users\Smailtos\Desktop\MP FindFileByMask\FindFile\VisualTesting\bin\Debug\VisualTesting.pdb
+C:\Users\Smailtos\Desktop\MP FindFileByMask\FindFile\VisualTesting\bin\Debug\FindFile.dll
+C:\Users\Smailtos\Desktop\MP FindFileByMask\FindFile\VisualTesting\bin\Debug\FindFile.pdb
+C:\Users\Smailtos\Desktop\MP FindFileByMask\FindFile\VisualTesting\obj\Debug\VisualTesting.csprojAssemblyReference.cache
+C:\Users\Smailtos\Desktop\MP FindFileByMask\FindFile\VisualTesting\obj\Debug\VisualTesting.csproj.CoreCompileInputs.cache
+C:\Users\Smailtos\Desktop\MP FindFileByMask\FindFile\VisualTesting\obj\Debug\VisualTesting.csproj.CopyComplete
+C:\Users\Smailtos\Desktop\MP FindFileByMask\FindFile\VisualTesting\obj\Debug\VisualTesting.exe
+C:\Users\Smailtos\Desktop\MP FindFileByMask\FindFile\VisualTesting\obj\Debug\VisualTesting.pdb
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\VisualTesting\bin\Debug\VisualTesting.exe.config
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\VisualTesting\bin\Debug\VisualTesting.exe
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\VisualTesting\bin\Debug\VisualTesting.pdb
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\VisualTesting\bin\Debug\FindFile.dll
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\VisualTesting\bin\Debug\FindFile.pdb
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\VisualTesting\obj\Debug\VisualTesting.csprojAssemblyReference.cache
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\VisualTesting\obj\Debug\VisualTesting.csproj.CoreCompileInputs.cache
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\VisualTesting\obj\Debug\VisualTesting.csproj.CopyComplete
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\VisualTesting\obj\Debug\VisualTesting.exe
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\VisualTesting\obj\Debug\VisualTesting.pdb

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FindFile;
 using System.Reflection; //Для подключения dll
+using System.IO;
 
 namespace VisualTesting
 {
@@ -13,10 +14,7 @@ namespace VisualTesting
         static void Main(string[] args)
         {
 
-            CallGetAllFiles("C:\\Users\\User\\Desktop\\Repos\\FindFile\\Testing\\testFolder_1");
-            File q = new File("qwer");
-
-
+            CallGetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\testFolder_1"));
             
         }
 
