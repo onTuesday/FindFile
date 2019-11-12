@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="testFolder_1\f_Dipth_1%28fourth%29.docx" />
     <None Include="testFolder_1\f_Dipth_1%28third%29.xlsx" />
   </ItemGroup>
   <ItemGroup>

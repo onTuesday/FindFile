@@ -95,12 +95,23 @@ namespace Testing
         [TestMethod]
         public void SetContentAndLenFromFileTest_4()
         {
-            File file = new File("..\\..\\testFolder_1\\f_Dipth_1(third).txt");
+            File file = new File("..\\..\\testFolder_1\\f_Dipth_1(third).xlsx");
 
             file.SetContentAndLenFromFile();
 
             //Assert.AreEqual("q", file.GetContent());
-            Assert.AreEqual(1, file.GetLength());
+            Assert.AreEqual(8153, file.GetLength());
+        }
+
+        [TestMethod]
+        public void SetContentAndLenFromFileTest_5()
+        {
+            File file = new File("..\\..\\testFolder_1\\f_Dipth_1(fourth).docx");
+
+            file.SetContentAndLenFromFile();
+
+            //Assert.AreEqual("q", file.GetContent());
+            Assert.AreEqual(11720, file.GetLength());
         }
     }
 }
