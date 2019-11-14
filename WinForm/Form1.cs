@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WinForm
 {
@@ -24,6 +25,12 @@ namespace WinForm
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            Form2 newForm = new Form2();
+            newForm.Show();
+            Program.CallGetAllFiles(Path.GetFullPath(textBox1.Text));
+            //int[] arr = new int[4] { 1, 2, 3, 4 };
+            //label1.Text = textBox1.Text;
+            //label2.Text = textBox2.Text;
             MessageBox.Show("Здесь будет резёльтат по пойску файлов", "Результат");
         }
 
@@ -52,6 +59,6 @@ namespace WinForm
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
-        } 
+        }
     }
 }
