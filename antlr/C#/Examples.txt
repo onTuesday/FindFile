@@ -1,0 +1,5 @@
+(Name='abc.txt')&(Length>=5000)&(Content~'hello')
+^(^(Length<15000))
+((Name~'a?c.*t')|(Length>20000))&(^(Content~'porn'))
+1000<Length<15000
+20000>Length

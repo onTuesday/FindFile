@@ -1,0 +1,27 @@
+expr returns[bool value]
+  : ( '('? eName     = exprName     {$value = eName;}    ')'? )+
+  | ( '('? eLength   = exprLength   {$value = eLength;}  ')'? )+
+  | ( '('? eContent  = exprContent  {$value = eContent;} ')'? )+
+ 
+  | '(' boolexpr {$value = $boolexpr.value;} ')'
+  ;
+  
+exprName returns[bool value]
+  : ( '('? 'Name' 	MASK_SIGN	'"' NAME_SYMBOLS 	'"'	')'? )+ 
+  ;
+  
+  
+System.Console.WriteLine(_localctx._MASK_SIGN.Text); 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+Использовать Hashtable memory!!!!!!!!!!!!!!!!!
