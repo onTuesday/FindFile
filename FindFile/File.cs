@@ -9,8 +9,8 @@ namespace FindFile
 {
     public class File
     {
-        private string name;
-        private long length;
+        public string name;
+        private UInt64 length;
         private string content;
 
 
@@ -26,7 +26,7 @@ namespace FindFile
             this.name = name;
         }
 
-        public void SetLength( int length )
+        public void SetLength( UInt64 length )
         {
             this.length = length;
         }
@@ -46,7 +46,7 @@ namespace FindFile
             return this.name;
         }
 
-        public long GetLength()
+        public UInt64 GetLength()
         {
             return this.length;
         }
@@ -57,7 +57,7 @@ namespace FindFile
             {
                 StreamReader file = new StreamReader(new FileStream(this.name, FileMode.Open));
                 this.content = file.ReadToEnd();
-                this.length = new System.IO.FileInfo(name).Length;
+                this.length = (UInt64)(new System.IO.FileInfo(name).Length);
                 file.Close();
             }
             catch (FileNotFoundException)

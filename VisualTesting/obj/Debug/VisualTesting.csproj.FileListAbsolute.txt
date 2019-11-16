@@ -28,3 +28,5 @@ C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\VisualTesting\obj\Debug\Visual
 C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\VisualTesting\obj\Debug\VisualTesting.csproj.CopyComplete
 C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\VisualTesting\obj\Debug\VisualTesting.exe
 C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\VisualTesting\obj\Debug\VisualTesting.pdb
+C:\Users\User\Desktop\Repos\FindFile\VisualTesting\bin\Debug\Antlr4.Runtime.dll
+C:\Users\User\Desktop\Repos\FindFile\VisualTesting\bin\Debug\Antlr4.Runtime.xml

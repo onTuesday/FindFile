@@ -14,8 +14,13 @@ namespace VisualTesting
         static void Main(string[] args)
         {
 
-            CallGetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\testFolder_1"));
-            
+            //CallGetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\testFolder_1"));
+            Client a = new Client();
+            a.Find("..\\..\\..\\Testing\\testFolder_2", "(Content~'Anime')&(1<=Length<10)");
+            foreach(var elem in Client.result)
+            {
+                Console.WriteLine(elem);
+            }
         }
 
         public static void CallGetAllFiles(string path)

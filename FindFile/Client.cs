@@ -5,11 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FindFile;
+using System.Collections;
 
 namespace FindFile
 {
     public class Client
     {
+        public static List<string> result = new List<string>(2);
+
         public int Find(string path, string mask)
         {
             MaskHandler maskHandler = new MaskHandler(mask);

@@ -49,3 +49,5 @@ C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\obj\Debug\Testing.cspr
 C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\obj\Debug\Testing.csproj.CopyComplete
 C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\obj\Debug\Testing.dll
 C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\obj\Debug\Testing.pdb
+C:\Users\User\Desktop\Repos\FindFile\Testing\bin\Debug\Antlr4.Runtime.dll
+C:\Users\User\Desktop\Repos\FindFile\Testing\bin\Debug\Antlr4.Runtime.xml
