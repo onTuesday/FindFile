@@ -20,7 +20,7 @@ options
 {
 	String NAME	= Path.GetFileName(MaskHandler.currentFile.GetName());
     UInt64 LENGTH = MaskHandler.currentFile.GetLength();
-    String CONTENT = MaskHandler.currentFile.GetContent();;
+    String CONTENT = MaskHandler.currentFile.GetContent();
 
 	bool IfFitsToNamemask(String Name, String Mask)
 	{
@@ -34,7 +34,7 @@ mask
 	;
 
 statement
-	: boolexpr  { Program.final = $boolexpr.value; }
+	: boolexpr  { MaskHandler.final = $boolexpr.value; }
 	;
 
 boolexpr returns[bool value]

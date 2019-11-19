@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using FindFile;
 
 namespace WinForm
 {
@@ -27,7 +28,10 @@ namespace WinForm
         {
             Form2 newForm = new Form2();
             newForm.Show();
-            Program.CallGetAllFiles(Path.GetFullPath(textBox1.Text));
+            Client.result.Clear();
+            Client a = new Client();
+            a.Find(Path.GetFullPath(textBox1.Text), textBox2.Text);
+            //Program.CallGetAllFiles(Path.GetFullPath(textBox1.Text));
             //int[] arr = new int[4] { 1, 2, 3, 4 };
             //label1.Text = textBox1.Text;
             //label2.Text = textBox2.Text;
@@ -59,6 +63,21 @@ namespace WinForm
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("На покушать нашей замечательной команде \n" +
+                "Сбер :", "Поддержание команды разработчиков", MessageBoxButtons.OK);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("ЗДЕСЬ МОГЛА БЫ БЫТЬ ВАША РЕКЛАМА \n" +
+                "Контакты: Вайбер       - \n" +
+                "                   Телеграмм - \n" +
+                "                   Вк                - \n" +
+                "                   Вотс            - \n", "Реклама", MessageBoxButtons.OK);
         }
     }
 }

@@ -12,106 +12,23 @@ namespace Testing
     public class Class_File
     {
         [TestMethod]
-        public void GetAndSetTest()
+        public void GetAndSetMethods()
         {
-            File file = new File("test.txt");
-
-            file.SetContent("Anime");
-            file.SetLength(20);
-            file.SetName("I'm File");
-
-            Assert.AreEqual(20, file.GetLength());
-            Assert.AreEqual("Anime", file.GetContent());
-            Assert.AreEqual("I'm File", file.GetName());
+            File file = new File("qwer.txt");
+            file.SetContent("www");
+            file.SetLength((ulong)123);
+            Assert.AreEqual(file.GetName(), "qwer.txt");
+            Assert.AreEqual(file.GetLength(), (ulong)123);
+            Assert.AreEqual(file.GetContent(), "www");
         }
 
         [TestMethod]
-        public void GetAndSetNameTest()
+        public void SetContentAndLenFromFile()
         {
-            File file = new File("test.txt");
-
-            file.SetName("Test file");
-            file.SetName("Renamed file");
-
-            Assert.AreEqual("Renamed file", file.GetName());
-        }
-
-        [TestMethod]
-        public void GetAndSetLengthTest()
-        {
-            File file = new File("test.txt");
-
-            file.SetLength(100);
-            file.SetLength(500);
-
-            Assert.AreEqual(500, file.GetLength());
-        }
-
-        [TestMethod]
-        public void GetAndSetContentTest()
-        {
-            File file = new File("test.txt");
-
-            file.SetContent("Content maker");
-            file.SetContent("Nor you, just ME");
-
-            Assert.AreEqual("Nor you, just ME", file.GetContent());
-        }
-
-
-        [TestMethod]
-        public void SetContentAndLenFromFileTest_1()
-        {
-            File file = new File("..\\..\\q.txt");
-
+            File file = new File(@"C:\Users\User\Desktop\Repos\FindFile\Testing\For Testing\TestFolder2\Hello.txt");
             file.SetContentAndLenFromFile();
-
-            Assert.AreEqual("Anime", file.GetContent());
-            Assert.AreEqual(5, file.GetLength());
-        }
-
-        [TestMethod]
-        public void SetContentAndLenFromFileTest_2()
-        {
-            File file = new File("..\\..\\testFolder_1\\f_Dipth_1(first).txt");
-
-            file.SetContentAndLenFromFile();
-
-            Assert.AreEqual("Здравствуйте", file.GetContent());
-            Assert.AreEqual(24, file.GetLength());
-        }
-
-        [TestMethod]
-        public void SetContentAndLenFromFileTest_3()
-        {
-            File file = new File("..\\..\\testFolder_1\\f_Dipth_1(second).txt");
-
-            file.SetContentAndLenFromFile();
-
-            Assert.AreEqual("Мама мыла раму", file.GetContent());
-            Assert.AreEqual(26, file.GetLength());
-        }
-
-        [TestMethod]
-        public void SetContentAndLenFromFileTest_4()
-        {
-            File file = new File("..\\..\\testFolder_1\\f_Dipth_1(third).xlsx");
-
-            file.SetContentAndLenFromFile();
-
-            //Assert.AreEqual("q", file.GetContent());
-            Assert.AreEqual(8153, file.GetLength());
-        }
-
-        [TestMethod]
-        public void SetContentAndLenFromFileTest_5()
-        {
-            File file = new File("..\\..\\testFolder_1\\f_Dipth_1(fourth).docx");
-
-            file.SetContentAndLenFromFile();
-
-            //Assert.AreEqual("q", file.GetContent());
-            Assert.AreEqual(11720, file.GetLength());
+            Assert.AreEqual(file.GetLength(), (ulong)7);
+            Assert.AreEqual(file.GetContent(), "Goodbye");
         }
     }
 }
