@@ -39,11 +39,7 @@ C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\bin\Debug\Microsoft.Vi
 C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\bin\Debug\Testing.dll
 C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\bin\Debug\Testing.pdb
 C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\bin\Debug\FindFile.dll
-C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
-C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\bin\Debug\FindFile.pdb
-C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
-C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\obj\Debug\Testing.csprojAssemblyReference.cache
 C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\obj\Debug\Testing.csproj.CoreCompileInputs.cache
 C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\obj\Debug\Testing.csproj.CopyComplete
@@ -53,3 +49,5 @@ C:\Users\User\Desktop\Repos\FindFile\Testing\bin\Debug\Antlr4.Runtime.dll
 C:\Users\User\Desktop\Repos\FindFile\Testing\bin\Debug\Antlr4.Runtime.xml
 C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\bin\Debug\Antlr4.Runtime.dll
 C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\bin\Debug\Antlr4.Runtime.xml
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\Testing\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll

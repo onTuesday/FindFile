@@ -13,6 +13,6 @@ namespace Testing
    public class Class_Client
     {
        // аплодисменты стоя, Ричард
-
+       
     }
 }
