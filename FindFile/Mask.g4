@@ -34,7 +34,7 @@ mask
 	;
 
 statement
-	: boolexpr  { MaskHandler.final = $boolexpr.value; }
+	: boolexpr  { Program.final = $boolexpr.value; }
 	;
 
 boolexpr returns[bool value]
@@ -60,82 +60,138 @@ exprName returns[bool value]
 exprLength returns[bool value]
 	: LENGTH_SYMBOLS EQUAL_SIGN 'Length'
 	{
+		String Size = $LENGTH_SYMBOLS.text;
+		UInt64 Length;
+		
+		switch(Size.Substring(Size.Length - 1))
+		{
+			case "k": Length = UInt64.Parse(Size.TrimEnd(Size[Size.Length - 1])) * 1024; break;
+			case "K": Length = UInt64.Parse(Size.TrimEnd(Size[Size.Length - 1])) * 1024; break;
+			case "m": Length = UInt64.Parse(Size.TrimEnd(Size[Size.Length - 1])) * 1024 * 1024; break;
+			case "M": Length = UInt64.Parse(Size.TrimEnd(Size[Size.Length - 1])) * 1024 * 1024; break;
+			case "g": Length = UInt64.Parse(Size.TrimEnd(Size[Size.Length - 1])) * 1024 * 1024 * 1024; break;
+			case "G": Length = UInt64.Parse(Size.TrimEnd(Size[Size.Length - 1])) * 1024 * 1024 * 1024; break;
+			default: Length = UInt64.Parse(Size); break;
+		}
+		
 		if ($EQUAL_SIGN.text == "=")
 		{
-			$value = (UInt64.Parse($LENGTH_SYMBOLS.text) == LENGTH);
+			$value = (Length == LENGTH);
 		}
 
 		if ($EQUAL_SIGN.text  == "<")
 		{
-			$value = (UInt64.Parse($LENGTH_SYMBOLS.text) < LENGTH);
+			$value = (Length < LENGTH);
 		}
 
 		if ($EQUAL_SIGN.text  == ">")
 		{
-			$value = (UInt64.Parse($LENGTH_SYMBOLS.text) > LENGTH);
+			$value = (Length > LENGTH);
 		}
 
 		if ($EQUAL_SIGN.text  == ">=")
 		{
-			$value = (UInt64.Parse($LENGTH_SYMBOLS.text) >= LENGTH);
+			$value = (Length >= LENGTH);
 		}
 
 		if ($EQUAL_SIGN.text  == "<=")
 		{
-			$value = (UInt64.Parse($LENGTH_SYMBOLS.text) <= LENGTH);
+			$value = (Length <= LENGTH);
 		}
 	} 
   
 	| 'Length' EQUAL_SIGN LENGTH_SYMBOLS
 	{
+		String Size = $LENGTH_SYMBOLS.text;
+		UInt64 Length;
+		
+		switch(Size.Substring(Size.Length - 1))
+		{
+			case "k": Length = UInt64.Parse(Size.TrimEnd(Size[Size.Length - 1])) * 1024; break;
+			case "K": Length = UInt64.Parse(Size.TrimEnd(Size[Size.Length - 1])) * 1024; break;
+			case "m": Length = UInt64.Parse(Size.TrimEnd(Size[Size.Length - 1])) * 1024 * 1024; break;
+			case "M": Length = UInt64.Parse(Size.TrimEnd(Size[Size.Length - 1])) * 1024 * 1024; break;
+			case "g": Length = UInt64.Parse(Size.TrimEnd(Size[Size.Length - 1])) * 1024 * 1024 * 1024; break;
+			case "G": Length = UInt64.Parse(Size.TrimEnd(Size[Size.Length - 1])) * 1024 * 1024 * 1024; break;
+			default: Length = UInt64.Parse(Size); break;
+		}
+
 		if ($EQUAL_SIGN.text == "=")
 		{
-			$value = (LENGTH == UInt64.Parse($LENGTH_SYMBOLS.text));
+			$value = (LENGTH == Length);
 		}
 
 		if ($EQUAL_SIGN.text  == "<")
 		{
-			$value = (LENGTH < UInt64.Parse($LENGTH_SYMBOLS.text));
+			$value = (LENGTH < Length);
 		}
 
 		if ($EQUAL_SIGN.text  == ">")
 		{
-			$value = (LENGTH > UInt64.Parse($LENGTH_SYMBOLS.text));
+			$value = (LENGTH > Length);
 		}
 
 		if ($EQUAL_SIGN.text  == ">=")
 		{
-			$value = (LENGTH >= UInt64.Parse($LENGTH_SYMBOLS.text));
+			$value = (LENGTH >= Length);
 		}
 
 		if ($EQUAL_SIGN.text  == "<=")
 		{
-			$value = (LENGTH == UInt64.Parse($LENGTH_SYMBOLS.text));
+			$value = (LENGTH <= Length);
 		}
 	}
 
 	| LENGTH_SYMBOLS_1 EQUAL_SIGN_1 'Length' EQUAL_SIGN_2 LENGTH_SYMBOLS_2
 	{
+		String Size1 = $LENGTH_SYMBOLS_1.text;
+		UInt64 Length1;
+		
+		switch(Size1.Substring(Size1.Length - 1))
+		{
+			case "k": Length1 = UInt64.Parse(Size1.TrimEnd(Size1[Size1.Length - 1])) * 1024; break;
+			case "K": Length1 = UInt64.Parse(Size1.TrimEnd(Size1[Size1.Length - 1])) * 1024; break;
+			case "m": Length1 = UInt64.Parse(Size1.TrimEnd(Size1[Size1.Length - 1])) * 1024 * 1024; break;
+			case "M": Length1 = UInt64.Parse(Size1.TrimEnd(Size1[Size1.Length - 1])) * 1024 * 1024; break;
+			case "g": Length1 = UInt64.Parse(Size1.TrimEnd(Size1[Size1.Length - 1])) * 1024 * 1024 * 1024; break;
+			case "G": Length1 = UInt64.Parse(Size1.TrimEnd(Size1[Size1.Length - 1])) * 1024 * 1024 * 1024; break;
+			default: Length1 = UInt64.Parse(Size1); break;
+		}
+
+		String Size2 = $LENGTH_SYMBOLS_2.text;
+		UInt64 Length2;
+		
+		switch(Size2.Substring(Size2.Length - 1))
+		{
+			case "k": Length2 = UInt64.Parse(Size2.TrimEnd(Size2[Size2.Length - 1])) * 1024; break;
+			case "K": Length2 = UInt64.Parse(Size2.TrimEnd(Size2[Size2.Length - 1])) * 1024; break;
+			case "m": Length2 = UInt64.Parse(Size2.TrimEnd(Size2[Size2.Length - 1])) * 1024 * 1024; break;
+			case "M": Length2 = UInt64.Parse(Size2.TrimEnd(Size2[Size2.Length - 1])) * 1024 * 1024; break;
+			case "g": Length2 = UInt64.Parse(Size2.TrimEnd(Size2[Size2.Length - 1])) * 1024 * 1024 * 1024; break;
+			case "G": Length2 = UInt64.Parse(Size2.TrimEnd(Size2[Size2.Length - 1])) * 1024 * 1024 * 1024; break;
+			default: Length2 = UInt64.Parse(Size2); break;
+		}
+		
 		if ($EQUAL_SIGN_1.text == ">")
 		{
 			if ($EQUAL_SIGN_2.text  == "<")
 			{
-				$value = ((LENGTH < UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH < UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH < Length1) && (LENGTH < Length2));
 			}
 
 			if ($EQUAL_SIGN_2.text  == ">")
 			{
-				$value = ((LENGTH < UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH > UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH < Length1) && (LENGTH > Length2));
 			}
 
 			if ($EQUAL_SIGN_2.text  == ">=")
 			{
-				$value = ((LENGTH < UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH >= UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH < Length1) && (LENGTH >= Length2));
 			}
 
 			if ($EQUAL_SIGN_2.text  == "<=")
 			{
-				$value = ((LENGTH < UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH <= UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH < Length1) && (LENGTH <= Length2));
 			}
 		}
 
@@ -143,22 +199,22 @@ exprLength returns[bool value]
 		{
 			if ($EQUAL_SIGN_2.text  == "<")
 			{
-				$value = ((LENGTH > UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH < UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH > Length1) && (LENGTH < Length2));
 			}
 
 			if ($EQUAL_SIGN_2.text  == ">")
 			{
-				$value = ((LENGTH > UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH > UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH > Length1) && (LENGTH > Length2));
 			}
 
 			if ($EQUAL_SIGN_2.text  == ">=")
 			{
-				$value = ((LENGTH > UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH >= UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH > Length1) && (LENGTH >= Length2));
 			}
 
 			if ($EQUAL_SIGN_2.text  == "<=")
 			{
-				$value = ((LENGTH > UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH <= UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH > Length1) && (LENGTH <= Length2));
 			}
 		}
 
@@ -166,22 +222,22 @@ exprLength returns[bool value]
 		{
 			if ($EQUAL_SIGN_2.text  == "<")
 			{
-				$value = ((LENGTH <= UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH < UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH <= Length1) && (LENGTH < Length2));
 			}
 
 			if ($EQUAL_SIGN_2.text  == ">")
 			{
-				$value = ((LENGTH <= UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH > UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH <= Length1) && (LENGTH > Length2));
 			}
 
 			if ($EQUAL_SIGN_2.text  == ">=")
 			{
-				$value = ((LENGTH <= UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH >= UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH <= Length1) && (LENGTH >= Length2));
 			}
 
 			if ($EQUAL_SIGN_2.text  == "<=")
 			{
-				$value = ((LENGTH <= UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH <= UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH <= Length1) && (LENGTH <= Length2));
 			}
 		}
 
@@ -189,22 +245,22 @@ exprLength returns[bool value]
 		{
 			if ($EQUAL_SIGN_2.text  == "<")
 			{
-				$value = ((LENGTH >= UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH < UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH >= Length1) && (LENGTH < Length2));
 			}
 
 			if ($EQUAL_SIGN_2.text  == ">")
 			{
-				$value = ((LENGTH >= UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH > UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH >= Length1) && (LENGTH > Length2));
 			}
 
 			if ($EQUAL_SIGN_2.text  == ">=")
 			{
-				$value = ((LENGTH >= UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH >= UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH >= Length1) && (LENGTH >= Length2));
 			}
 
 			if ($EQUAL_SIGN_2.text  == "<=")
 			{
-				$value = ((LENGTH >= UInt64.Parse($LENGTH_SYMBOLS_1.text)) && (LENGTH <= UInt64.Parse($LENGTH_SYMBOLS_2.text)));
+				$value = ((LENGTH >= Length1) && (LENGTH <= Length2));
 			}
 		}
 	}
@@ -241,15 +297,15 @@ NAME_SYMBOLS
 	;
 	
 LENGTH_SYMBOLS
-	: '0'..'9'+
+	: '0'..'9'+ [kKmMgG]?
 	;
 
 LENGTH_SYMBOLS_1
-	: '0'..'9'+
+	: '0'..'9'+ [kKmMgG]?
 	;
 
 LENGTH_SYMBOLS_2
-	: '0'..'9'+
+	: '0'..'9'+ [kKmMgG]?
 	;
 
 CONTENT_SYMBOLS
