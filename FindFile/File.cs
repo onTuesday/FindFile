@@ -38,7 +38,7 @@ namespace FindFile
 
         public string GetContent()
         {
-            return this.content;
+            return this.content ;
         }
 
         public string GetName()
@@ -55,7 +55,7 @@ namespace FindFile
         {
             try
             {
-                StreamReader file = new StreamReader(new FileStream(this.name, FileMode.Open));
+                StreamReader file = new StreamReader(new FileStream(this.name, FileMode.Open), System.Text.Encoding.Default);
                 this.content = file.ReadToEnd();
                 this.length = (UInt64)(new System.IO.FileInfo(name).Length);
                 file.Close();

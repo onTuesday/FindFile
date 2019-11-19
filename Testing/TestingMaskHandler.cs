@@ -3,8 +3,6 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-//спасибо Ричард за закоммиченный файл с примером, надеюсь ты выспался
-
 namespace Testing
 {
     /// <summary>

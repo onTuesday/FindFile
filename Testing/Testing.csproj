@@ -62,8 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="testFolder_1\f_Dipth_1%28fourth%29.docx" />
-    <None Include="testFolder_1\f_Dipth_1%28third%29.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FindFile\FindFile.csproj">
@@ -73,12 +71,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="q.txt" />
-    <Content Include="testFolder_1\f_Dipth_1%28first%29.txt" />
-    <Content Include="testFolder_1\f_Dipth_1%28second%29.txt" />
-    <Content Include="testFolder_1\d_Dipth_1%28first%29\f_Dipth_2%28first%29.txt" />
-    <Content Include="testFolder_1\d_Dipth_1%28first%29\f_Dipth_2%28second%29.txt" />
-    <Content Include="testFolder_1\d_Dipth_1%28second%29\f_Dipth_2%28first%29.txt" />
-    <Content Include="testFolder_1\d_Dipth_1%28second%29\d_Dipth_2%28first%29\f_Dipth_3%28first%29.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
