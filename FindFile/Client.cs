@@ -11,7 +11,7 @@ namespace FindFile
 {
     public class Client
     {
-        public static List<string> result = new List<string>(2);
+        public static List<string> result = new List<string>();
 
         public int Find(string path, string mask)
         {

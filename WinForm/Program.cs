@@ -19,6 +19,7 @@ namespace WinForm
 
         public static void CallGetAllFiles(string path)
         {
+            
             MaskHandler maskH = new MaskHandler("");
             DirectoryHandler dirHandler = new DirectoryHandler(maskH);
             dirHandler.GetAllFiles(path);

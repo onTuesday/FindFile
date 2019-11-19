@@ -26,3 +26,13 @@ C:\Users\User\Desktop\Repos\FindFile\FindFile\obj\Debug\FindFile.csproj.Antlr4Ge
 C:\Users\User\Desktop\Repos\FindFile\FindFile\bin\Debug\Antlr4.Runtime.dll
 C:\Users\User\Desktop\Repos\FindFile\FindFile\bin\Debug\Antlr4.Runtime.xml
 C:\Users\User\Desktop\Repos\FindFile\FindFile\obj\Debug\FindFile.csproj.CopyComplete
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\FindFile\obj\Debug\MaskLexer.cs
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\FindFile\obj\Debug\MaskParser.cs
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\FindFile\obj\Debug\MaskListener.cs
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\FindFile\obj\Debug\MaskBaseListener.cs
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\FindFile\obj\Debug\MaskVisitor.cs
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\FindFile\obj\Debug\MaskBaseVisitor.cs
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\FindFile\obj\Debug\FindFile.csproj.Antlr4GeneratedCodeFileListAbsolute.txt
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\FindFile\bin\Debug\Antlr4.Runtime.dll
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\FindFile\bin\Debug\Antlr4.Runtime.xml
+C:\Users\Smailtos\Desktop\FindFileByMask\FindFile\FindFile\obj\Debug\FindFile.csproj.CopyComplete
