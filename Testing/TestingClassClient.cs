@@ -12,7 +12,7 @@ namespace Testing
     [TestClass]
    public class Class_Client
     {
-       
+       // аплодисменты стоя, Ричард
 
     }
 }
