@@ -34,6 +34,13 @@ namespace Testing
             Assert.AreEqual(file3.GetName(), "DreamTeam.txt");
             Assert.AreEqual(file3.GetLength(), (UInt64)100000);
             Assert.AreEqual(file3.GetContent(), "Sun and moon");
+
+            File file4 = new File("Wrong name.txt");
+            file4.SetName("GoodName.txt");
+            file4.SetLength((UInt64)322);
+
+            Assert.AreEqual("GoodName.txt", file4.GetName());
+            Assert.AreEqual((UInt64)322, file4.GetLength());
         }
 
         [TestMethod]

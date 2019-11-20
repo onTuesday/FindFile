@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using FindFile;
 using System.Collections;
 
-//ГДЕ ФУНКЦИЯ ОСТАНОВКИ ПОКАЗА ПОДХОДЯЩИХ ФАЙЛОВ?
+
 
 
 namespace FindFile

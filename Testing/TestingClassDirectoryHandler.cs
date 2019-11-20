@@ -20,7 +20,7 @@ namespace Testing
             Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder1")), 8);
             Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder2")), 3);
             Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3")), 7);
-            Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4")), 34);
+            Assert.AreEqual(38, dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4")) );
             Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder5")), 4);
         }
     }

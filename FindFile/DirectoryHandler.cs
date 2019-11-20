@@ -8,6 +8,11 @@ namespace FindFile
 {
     public class DirectoryHandler
     {
+        /// <summary>
+        /// Класс, обслуживающий рекурсивный обход заданной директории.
+        /// Для каждого найденного файла вызывает функцию обработчика маски
+        /// </summary>
+        /// 
         private MaskHandler maskHandler; //Класс-обработчик, в который мы посылаем файл
 
         public DirectoryHandler( MaskHandler maskHandler )

@@ -20,9 +20,9 @@ namespace Testing
             string path1 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder2");
             string mask1 = "Content~'Anime'\n";
             client1.Find(path1, mask1);
-            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder2\\qwer.txt"));
-            Assert.AreEqual(Client.result[1], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder2\\solaraLovesFootball.txt"));
-            Assert.AreEqual(Client.result[2], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder2\\wer.txt"));
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder2\\qwer.txt")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder2\\solaraLovesFootball.txt")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder2\\wer.txt")), true);
             Client.result.Clear(); 
         }
 
@@ -34,10 +34,10 @@ namespace Testing
             string path2 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3");
             string mask2 = "Name~'pic*.jpg'\n";
             client2.Find(path2, mask2);
-            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture.jpg"));
-            Assert.AreEqual(Client.result[1], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture1.jpg"));
-            Assert.AreEqual(Client.result[2], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture12.jpg"));
-            Assert.AreEqual(Client.result[3], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture48.jpg"));
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture.jpg")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture1.jpg")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture12.jpg")), true );
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture48.jpg")), true);
             Client.result.Clear();
         }
 
@@ -49,11 +49,11 @@ namespace Testing
             string path3 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3");
             string mask3 = "Name~'pic*.jp*g'\n";
             client3.Find(path3, mask3);
-            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\pict229.jpeg"));
-            Assert.AreEqual(Client.result[1], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture.jpg"));
-            Assert.AreEqual(Client.result[2], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture1.jpg"));
-            Assert.AreEqual(Client.result[3], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture12.jpg"));
-            Assert.AreEqual(Client.result[4], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture48.jpg"));
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\pict229.jpeg")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture.jpg")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture1.jpg")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture12.jpg")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture48.jpg")), true);
 
             Client.result.Clear();
         }
@@ -66,9 +66,9 @@ namespace Testing
             string path4 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3");
             string mask4 = "(Name~'pic*.jpg')&(10k<=Length<70K)\n";
             client4.Find(path4, mask4);
-            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture.jpg"));
-            Assert.AreEqual(Client.result[1], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture1.jpg"));
-            Assert.AreEqual(Client.result[2], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture12.jpg"));
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture.jpg")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture1.jpg")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture12.jpg")), true);
             Client.result.Clear();
         }
 
@@ -80,11 +80,11 @@ namespace Testing
             string path5 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4");
             string mask5 = "(Name~'*ber*.jpg')&(100k<=Length)'\n";
             client5.Find(path5, mask5);
-            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\22ofnovember.jpg"));
-            Assert.AreEqual(Client.result[1], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\decemberthe25th.jpg"));
-            Assert.AreEqual(Client.result[2], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\octoberhalloween31.jpg"));
-            Assert.AreEqual(Client.result[3], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\september20.jpg"));
-            Assert.AreEqual(Client.result[4], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\septemberthe1.jpg"));
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\22ofnovember.jpg")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\decemberthe25th.jpg")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\octoberhalloween31.jpg")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\september20.jpg")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\septemberthe1.jpg")), true);
             
             Client.result.Clear();
         }
@@ -97,7 +97,7 @@ namespace Testing
             string path6 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3");
             string mask6 = "(Name~'pic*.txt')&(^(100k<=Length))&(Content~'renown')\n";
             client6.Find(path6, mask6);
-            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picasso.txt"));
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picasso.txt")), true);
             Client.result.Clear();
         }
 
@@ -109,9 +109,9 @@ namespace Testing
             string path7 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4");
             string mask7 = "(Name~'*.jp*g')&(Length>440K)'\n";
             client7.Find(path7, mask7);
-            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\JfK.jpg"));
-            Assert.AreEqual(Client.result[1], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\okok.jpg"));
-            Assert.AreEqual(Client.result[2], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\september20.jpg"));
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\JfK.jpg")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\okok.jpg")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\september20.jpg")), true);
             Client.result.Clear();
         }
 
@@ -123,13 +123,13 @@ namespace Testing
             string path8 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4");
             string mask8 = "(^(Name~'*.jp*g'))&(Length>300K)'\n";
             client8.Find(path8, mask8);
-            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\agatachas0.txt"));
-            Assert.AreEqual(Client.result[1], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\danse_agatha.txt"));
-            Assert.AreEqual(Client.result[2], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Fury_King.txt"));
-            Assert.AreEqual(Client.result[3], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King_Bleid.txt"));
-            Assert.AreEqual(Client.result[4], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\kolorado_king.txt"));
-            Assert.AreEqual(Client.result[5], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\killed.png"));
-            Assert.AreEqual(Client.result[6], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\ugly.png"));
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\agatachas0.txt")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\danse_agatha.txt")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Fury_King.txt")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King_Bleid.txt")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\kolorado_king.txt")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\killed.png")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\ugly.png")), true);
             Client.result.Clear();
         }
 
@@ -139,12 +139,13 @@ namespace Testing
             Client client9 = new Client();
 
             string path9 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4");
-            string mask9 = "Content~'Shawshank'\n";
+            string mask9 = "Content~'*Goodbye*\n";
             client9.Find(path9, mask9);
-            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King The Shining.txt"));
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Hello.txt")), true);
             Client.result.Clear();
         }
 
+        [TestMethod]
         public void resultTest10()
         {
             Client client10 = new Client();
@@ -152,12 +153,13 @@ namespace Testing
             string path10 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4");
             string mask10 = "Content~'Nixon'\n";
             client10.Find(path10, mask10);
-            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King Shawshank.txt"));
-            Assert.AreEqual(Client.result[1], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King The Shining.txt"));
-            Assert.AreEqual(Client.result[2], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\The-Stand.txt"));
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King Shawshank.txt")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King The Shining.txt")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\The-Stand.txt")), true);
             Client.result.Clear();
         }
 
+        [TestMethod]
         public void resultTest11()
         {
             Client client11 = new Client();
@@ -165,10 +167,11 @@ namespace Testing
             string path11 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4");
             string mask11 = "(^(Name~'King*.txt'))&(Content~'Nixon')\n";
             client11.Find(path11, mask11);
-            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\The-Stand.txt"));
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\The-Stand.txt")), true);
             Client.result.Clear();
         }
 
+        [TestMethod]
         public void resultTest12()
         {
             Client client12 = new Client();
@@ -176,12 +179,13 @@ namespace Testing
             string path12 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4");
             string mask12 = "(Content~'Nixon')|(^(10<=Length<2M))\n";
             client12.Find(path12, mask12);
-            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King Shawshank.txt"));
-            Assert.AreEqual(Client.result[1], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King The Shining.txt"));
-            Assert.AreEqual(Client.result[2], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\The-Stand.txt"));
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King Shawshank.txt")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King The Shining.txt")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\The-Stand.txt")), true);
             Client.result.Clear();
         }
 
+        [TestMethod]
         public void resultTest13()
         {
             Client client13 = new Client();
@@ -189,30 +193,32 @@ namespace Testing
             string path13 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3");
             string mask13 = "((Content~'descrip?ion')&(999<=Length))|(Length<98K)\n";
             client13.Find(path13, mask13);
-            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\pic_description.txt"));
-            Assert.AreEqual(Client.result[1], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture.jpg"));
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\pic_description.txt")), true);
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture.jpg")), true);
             Client.result.Clear();
         }
 
+        [TestMethod]
         public void resultTest14()
         {
             Client client14 = new Client();
 
-            string path14 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3");
+            string path14 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\");
             string mask14 = "Name='kennedy.jpg'\n";
             client14.Find(path14, mask14);
-            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\kennedy.jpg"));
+            Assert.AreEqual(Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\kennedy.jpg")), true);
             Client.result.Clear();
         }
 
+        [TestMethod]
         public void resultTest15()
         {
             Client client15 = new Client();
 
-            string path15 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3");
-            string mask15 = "Length=325296\n";
+            string path15 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4");
+            string mask15 = "(374<=Length<=377000\n)";
             client15.Find(path15, mask15);
-            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\notbeauty.jpeg"));
+            Assert.AreEqual(true, Client.result.Contains(System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\1.jpg")));
             Client.result.Clear();
         }
     }

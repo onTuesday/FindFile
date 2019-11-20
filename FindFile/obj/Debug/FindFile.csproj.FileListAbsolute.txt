@@ -1,6 +1,5 @@
 C:\Users\User\Desktop\Repos\FindFile\FindFile\bin\Debug\FindFile.dll
 C:\Users\User\Desktop\Repos\FindFile\FindFile\bin\Debug\FindFile.pdb
-C:\Users\User\Desktop\Repos\FindFile\FindFile\obj\Debug\FindFile.csprojAssemblyReference.cache
 C:\Users\User\Desktop\Repos\FindFile\FindFile\obj\Debug\FindFile.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\Repos\FindFile\FindFile\obj\Debug\FindFile.dll
 C:\Users\User\Desktop\Repos\FindFile\FindFile\obj\Debug\FindFile.pdb
@@ -52,3 +51,4 @@ u:\Users\7317124\Desktop\FindFileByMask\FindFile\FindFile\obj\Debug\FindFile.csp
 u:\Users\7317124\Desktop\FindFileByMask\FindFile\FindFile\obj\Debug\FindFile.csproj.CopyComplete
 u:\Users\7317124\Desktop\FindFileByMask\FindFile\FindFile\obj\Debug\FindFile.dll
 u:\Users\7317124\Desktop\FindFileByMask\FindFile\FindFile\obj\Debug\FindFile.pdb
+C:\Users\User\Desktop\Repos\FindFile\FindFile\obj\Debug\FindFile.csprojAssemblyReference.cache

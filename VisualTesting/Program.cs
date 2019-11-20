@@ -14,7 +14,14 @@ namespace VisualTesting
         static void Main(string[] args)
         {
 
-          
+            Client client9 = new Client();
+
+            string path9 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4");
+            string mask9 = "Content~'*Hello*'\n";
+            client9.Find(path9, mask9);
+
+            foreach (var e in Client.result)
+                Console.WriteLine(e);
         }
     }
 }
