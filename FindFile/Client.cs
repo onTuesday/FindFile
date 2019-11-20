@@ -16,18 +16,12 @@ namespace FindFile
     {
         public static List<string> result = new List<string>();
 
+        public static string error { get; }
+
         public int Find(string path, string mask)
         {
             MaskHandler maskHandler = new MaskHandler(mask);
             DirectoryHandler dirHandler = new DirectoryHandler( maskHandler );
-
-            //Проверка на существование директории
-            if (!Directory.Exists(path))
-            {
-                Console.WriteLine("Cannot find directory");
-                throw new DirectotyDoesntExistsException();
-            }
-
             dirHandler.GetAllFiles(path);
 
             return 0;   

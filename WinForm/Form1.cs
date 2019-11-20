@@ -26,6 +26,12 @@ namespace WinForm
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            if (Client.error != "")
+            {
+                MessageBox.Show(Client.error, "Ошибка!");
+                return;
+            }
+            
             Form2 newForm = new Form2();
             newForm.Show();
             Client.result.Clear();
