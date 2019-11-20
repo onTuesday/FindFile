@@ -58,7 +58,6 @@
     <Compile Include="TestingClassDirectoryHandler.cs" />
     <Compile Include="TestingClassFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestingMaskHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -31,10 +31,10 @@ namespace FindFile
             MaskParser parser = new MaskParser(tokens);
             parser.mask();
 
-            Console.WriteLine("\nПолучен очередной файл");
-            Console.Write((string)file);
-            Console.WriteLine("Тут он будет обрабатываться. Если подошёл по маске, мы его засунем в result");
-            Console.WriteLine(final == true);
+            //Console.WriteLine("\nПолучен очередной файл");
+            //Console.Write((string)file);
+            //Console.WriteLine("Тут он будет обрабатываться. Если подошёл по маске, мы его засунем в result");
+            //Console.WriteLine(final == true);
 
             if (final == true)
             {
