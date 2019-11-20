@@ -50,7 +50,6 @@
   <ItemGroup>
     <Compile Include="Client.cs" />
     <Compile Include="DirectoryHandler.cs" />
-    <Compile Include="Exceptions.cs" />
     <Compile Include="File.cs" />
     <Compile Include="Mask.g4.lexer.cs">
       <DependentUpon>Mask.g4</DependentUpon>

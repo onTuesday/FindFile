@@ -12,14 +12,20 @@ namespace FindFile
         /// Класс, обслуживающий рекурсивный обход заданной директории.
         /// Для каждого найденного файла вызывает функцию обработчика маски
         /// </summary>
-        /// 
-        private MaskHandler maskHandler; //Класс-обработчик, в который мы посылаем файл
+
+        private MaskHandler maskHandler; 
 
         public DirectoryHandler( MaskHandler maskHandler )
         {
             this.maskHandler = maskHandler;
         }
 
+        /// <summary>
+        /// Рекурсивный обход файлов.
+        /// Для каждого найденного файла вызывается Compare для сопоставления файла маске
+        /// </summary>
+        /// <param name="path">Начальная директория</param>
+        /// <returns>Количество найденных файлов</returns>
         public int GetAllFiles(string path)
         {
             int count = 0;

@@ -12,6 +12,10 @@ namespace FindFile
 {
     public class MaskHandler
     {
+        /// <summary>
+        /// Класс, который сопоставляет файлы нашей маске и в случае успеха добавляет их в Client.result
+        /// </summary>
+
         private string mask;
         public static File currentFile;
         public static bool final = false;
@@ -21,6 +25,11 @@ namespace FindFile
             this.mask = mask;
         }
 
+        /// <summary>
+        /// Сопоставить файл с маской
+        /// </summary>
+        /// <param name="file">Файл для проверки</param>
+        /// <returns>Возвращает true если файл подошёл по маске, false в противном случае.</returns>
         public bool Compare(File file)
         {
             MaskHandler.currentFile = file;
@@ -30,11 +39,6 @@ namespace FindFile
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             MaskParser parser = new MaskParser(tokens);
             parser.mask();
-
-            //Console.WriteLine("\nПолучен очередной файл");
-            //Console.Write((string)file);
-            //Console.WriteLine("Тут он будет обрабатываться. Если подошёл по маске, мы его засунем в result");
-            //Console.WriteLine(final == true);
 
             if (final == true)
             {

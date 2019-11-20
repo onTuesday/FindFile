@@ -26,7 +26,7 @@ namespace WinForm
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (Client.error != "")
+            if (Client.error != null)
             {
                 MessageBox.Show(Client.error, "Ошибка!");
                 return;
