@@ -17,11 +17,11 @@ namespace Testing
         {
             MaskHandler handler = new MaskHandler("");
             DirectoryHandler dHandler = new DirectoryHandler(handler);
-            Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder1")), 8);  //сколько файлов в TestFolder1
-            Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder2")), 3);  //сколько файлов в TestFolder2
-            Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3")), 7);  //сколько файлов в TestFolder3
-            Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4")), 34); //сколько файлов в TestFolder4
-            Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder5")), 4);  //сколько файлов в TestFolder5
+            Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder1")), 8);
+            Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder2")), 3);
+            Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3")), 7);
+            Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4")), 34);
+            Assert.AreEqual(dHandler.GetAllFiles(Path.GetFullPath("..\\..\\..\\Testing\\TestFolder5")), 4);
         }
     }
 }

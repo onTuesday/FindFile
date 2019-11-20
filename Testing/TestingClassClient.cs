@@ -132,5 +132,88 @@ namespace Testing
             Assert.AreEqual(Client.result[6], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\ugly.png"));
             Client.result.Clear();
         }
+
+        [TestMethod]
+        public void resultTest9()
+        {
+            Client client9 = new Client();
+
+            string path9 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4");
+            string mask9 = "Content~'Shawshank'\n";
+            client9.Find(path9, mask9);
+            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King The Shining.txt"));
+            Client.result.Clear();
+        }
+
+        public void resultTest10()
+        {
+            Client client10 = new Client();
+
+            string path10 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4");
+            string mask10 = "Content~'Nixon'\n";
+            client10.Find(path10, mask10);
+            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King Shawshank.txt"));
+            Assert.AreEqual(Client.result[1], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King The Shining.txt"));
+            Assert.AreEqual(Client.result[2], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\The-Stand.txt"));
+            Client.result.Clear();
+        }
+
+        public void resultTest11()
+        {
+            Client client11 = new Client();
+
+            string path11 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4");
+            string mask11 = "(^(Name~'King*.txt'))&(Content~'Nixon')\n";
+            client11.Find(path11, mask11);
+            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\The-Stand.txt"));
+            Client.result.Clear();
+        }
+
+        public void resultTest12()
+        {
+            Client client12 = new Client();
+
+            string path12 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4");
+            string mask12 = "(Content~'Nixon')|(^(10<=Length<2M))\n";
+            client12.Find(path12, mask12);
+            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King Shawshank.txt"));
+            Assert.AreEqual(Client.result[1], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\King The Shining.txt"));
+            Assert.AreEqual(Client.result[2], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\The-Stand.txt"));
+            Client.result.Clear();
+        }
+
+        public void resultTest13()
+        {
+            Client client13 = new Client();
+
+            string path13 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3");
+            string mask13 = "((Content~'descrip?ion')&(999<=Length))|(Length<98K)\n";
+            client13.Find(path13, mask13);
+            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\pic_description.txt"));
+            Assert.AreEqual(Client.result[1], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3\\picture.jpg"));
+            Client.result.Clear();
+        }
+
+        public void resultTest14()
+        {
+            Client client14 = new Client();
+
+            string path14 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3");
+            string mask14 = "Name='kennedy.jpg'\n";
+            client14.Find(path14, mask14);
+            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\kennedy.jpg"));
+            Client.result.Clear();
+        }
+
+        public void resultTest15()
+        {
+            Client client15 = new Client();
+
+            string path15 = System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder3");
+            string mask15 = "Length=325296\n";
+            client15.Find(path15, mask15);
+            Assert.AreEqual(Client.result[0], System.IO.Path.GetFullPath("..\\..\\..\\Testing\\TestFolder4\\Photos\\notbeauty.jpeg"));
+            Client.result.Clear();
+        }
     }
 }
