@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.button2 = new System.Windows.Forms.Button();
+            
             this.SuspendLayout();
             // 
             // button2
@@ -43,11 +44,21 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // treeView1
+            // 
+            treeView1.LabelEdit = true;
+            treeView1.Location = new System.Drawing.Point(12, 12);
+            treeView1.Name = "treeView1";
+            treeView1.Size = new System.Drawing.Size(519, 536);
+            treeView1.TabIndex = 3;
+            treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(treeView1);
             this.Controls.Add(this.button2);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -59,5 +70,6 @@
         #endregion
 
         private System.Windows.Forms.Button button2;
+        public static System.Windows.Forms.TreeView treeView1;
     }
 }

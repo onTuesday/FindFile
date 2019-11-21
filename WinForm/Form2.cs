@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FindFile;
+using System.Diagnostics;
 
 namespace WinForm
 {
     public partial class Form2 : Form
     {
-        bool stop = false;
+        public static bool stop = false;
 
         public Form2()
         {
@@ -23,10 +24,11 @@ namespace WinForm
         private void button2_Click(object sender, EventArgs e)
         {
             stop = true;
-            /*while (stop != true)
-            {
-                Client.result.
-            }*/
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            Process.Start(treeView1.SelectedNode.Text);
         }
     }
 }

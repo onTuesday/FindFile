@@ -37,11 +37,20 @@ namespace WinForm
             Client.result.Clear();
             Client a = new Client();
             a.Find(Path.GetFullPath(textBox1.Text), textBox2.Text);
-            //Program.CallGetAllFiles(Path.GetFullPath(textBox1.Text));
-            //int[] arr = new int[4] { 1, 2, 3, 4 };
-            //label1.Text = textBox1.Text;
-            //label2.Text = textBox2.Text;
-            MessageBox.Show("Здесь будет резёльтат по пойску файлов", "Результат");
+
+            Form2.treeView1.BeginUpdate();
+            Form2.treeView1.Nodes.Clear();
+            foreach (string elem in Client.result)
+            {
+
+                if (Form2.stop == true)
+                {
+                    break;
+                }
+                
+                Form2.treeView1.Nodes.Add(elem);
+            }
+            Form2.treeView1.EndUpdate();
         }
 
         private void button2_Click(object sender, EventArgs e)

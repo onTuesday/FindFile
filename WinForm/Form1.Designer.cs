@@ -28,6 +28,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            Form2.treeView1 = new System.Windows.Forms.TreeView();
             // 
             // button1
             // 
